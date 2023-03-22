@@ -12,7 +12,7 @@ function Header(){
 
         <li className="nav-item">
             <NavLink 
-            to='/Todo-list' 
+            to='/TodoList' 
             end 
             className={({ isActive }) =>
                 isActive ? 'nav-link active' : 'nav-link'
@@ -36,6 +36,16 @@ function Header(){
                 isActive ? 'nav-link active' : 'nav-link'
               }>Exercices</NavLink>
         </li>
+
+        <li className="nav-item">
+            <NavLink 
+            to='/xcal' 
+            end 
+            className={({ isActive }) =>
+                isActive ? 'nav-link active' : 'nav-link'
+              }>Full Calendar</NavLink>
+        </li>
+
         </ul>
     </div>
     </nav>  
