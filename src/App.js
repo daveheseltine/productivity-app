@@ -4,6 +4,8 @@ import Exercices from './pages/exercises/exercises'
 import Home from './pages/home/home'
 import Todolist from './pages/todoList/todoList'
 import Header from './components/header/header'
+import FullCalendar from './pages/xcal/fullCalendar'
+
 
 function App() {
   return (
@@ -11,9 +13,10 @@ function App() {
       <Header />
       <Routes>
       <Route path='/Home' element={<Home/>} />
-        <Route path='/Todo-list' element={<Todolist/>} />
+        <Route path='/TodoList' element={<Todolist/>} />
         <Route path='/Calendar' element={<Calendar/>} />
         <Route path='/Exercises' element={<Exercices/>} />
+        <Route path='/xcal' element={<FullCalendar/>} />
       </Routes>
     </Router>
   );
