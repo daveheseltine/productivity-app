@@ -1,5 +1,11 @@
+import Form from "../../components/Form/Form"
+
 function Todolist(){
-    return <div>Todolist</div>
+    return (
+        <div>
+            <Form />
+        </div>
+    );
 }
 
 
