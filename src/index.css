@@ -1,13 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind pages;
+
+/* * {
+  background-color: steelblue;
+  font-family: Georgia;
+  font-size: large;
+  color: white;
+
+} */
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: rgb(72, 109, 139);
+  font-family: Georgia, 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* font-family: garamond; */
+  
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
