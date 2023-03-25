@@ -32,12 +32,12 @@
     
  ## Installation 
 
- This application needs installation of create-react-appas well as npm packages hammer.js and masonry.js 
+ This application needs installation of create-react-app as well as React libraries hammer.js and masonry.js 
 
     
  ## Usage 
 
- see deployed page at: 
+ see deployed page at: https://mellow-clafoutis-de2706.netlify.app/
 
     
  ## License 
@@ -52,7 +52,7 @@
     
  ## Tests 
 
- screen recording can be found here:
+ screen recording can be found here: https://test
 
     
  ## Questions 
@@ -62,4 +62,3 @@
 
     
  You can also drop an email at: test@test.com
- 
