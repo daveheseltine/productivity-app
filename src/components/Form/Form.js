@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 
 //Function to create a form component
-function Form(){
+function Form(props){
 
     //Uses state to update the name and messages for when the form is submitted
     const[toDoName, setToDoName] = useState('');
@@ -47,9 +47,10 @@ function Form(){
                 Message: toDoMessage,
                 Date: date
             }
-            //Pushes these into local storage
+            //Pushes these into local storagegit
             toDoListItems.push(newToDo)
             window.localStorage.setItem('toDoListItems', JSON.stringify(toDoListItems));
+            props.createToDoItems(JSON.parse(localStorage.getItem('toDoListItems')))
         }
 
         //Resets state so a new input can be added
