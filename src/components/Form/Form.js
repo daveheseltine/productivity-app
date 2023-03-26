@@ -33,7 +33,6 @@ function Form(props){
     //Function for form submission, store the values in local storage before resetting them, this will then be used to render the todo list items in an unordered list
     function formSubmit(event){
         event.preventDefault();
-        submitMessage(`Thank you for sending me a message, for now this is a placeholder. You entered: Name:${toDoName}, message: ${toDoMessage}, Your date: ${date}`);
 
         //Form must at least have a name
         if (toDoName !== ''){
@@ -50,7 +49,7 @@ function Form(props){
             //Pushes these into local storagegit
             toDoListItems.push(newToDo)
             window.localStorage.setItem('toDoListItems', JSON.stringify(toDoListItems));
-            
+
             //Recreates the todolist state in todoList.js
             props.createToDoItems(JSON.parse(localStorage.getItem('toDoListItems')))
         }
