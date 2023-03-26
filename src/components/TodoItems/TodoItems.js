@@ -1,4 +1,5 @@
 import './TodoItems.css'
+import Modal from '../Modal/Modal'
 
 function TodoItems(props){
 
@@ -15,11 +16,14 @@ function TodoItems(props){
         }
     }
 
+    
     //JSX code for the todo list items and takes in the function deleteitems and the props.id as its argument
     return(
-        <li className="toDoList row text-wrap" id={props.id} >
+        <li className="toDoList row text-wrap" id={props.id}>
             <h4 className='toDoItemH4'>{props.name}</h4>
-            <button className='toDoItemButton' onClick={() => deleteItem(props.id)}>Delete</button>
+            <div className='todoItemButtonContainer'>
+                <button className='toDoItemButton' onClick={() => deleteItem(props.id)}>Delete</button>
+            </div>
         </li>
     );
 }

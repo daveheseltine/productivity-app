@@ -9,3 +9,15 @@
 .toDoItemH4{
     width: 2rem;    
 }
+
+.toDoItemButton{
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.todoItemButtonContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

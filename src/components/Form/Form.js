@@ -6,7 +6,6 @@ function Form(props){
     //Uses state to update the name and messages for when the form is submitted
     const[toDoName, setToDoName] = useState('');
     const[toDoMessage, setToDoMessage] = useState('');
-    const [submitted, submitMessage] = useState('');
 
     //Gets the date, used https://www.makeuseof.com/react-date-picker/ for understanding of this
     const[date, setDate] = useState('');
@@ -46,7 +45,7 @@ function Form(props){
                 Message: toDoMessage,
                 Date: date
             }
-            //Pushes these into local storagegit
+            //Pushes these into local storage
             toDoListItems.push(newToDo)
             window.localStorage.setItem('toDoListItems', JSON.stringify(toDoListItems));
 
@@ -80,7 +79,6 @@ function Form(props){
                 <div className='formButtonCustom'>
                     <button type="submit" className="btn btn-primary" onClick={formSubmit}>Submit</button>
                 </div>
-                <p className='submitMessage'>{submitted}</p>
             </form>   
         </div>
     );
