@@ -50,6 +50,8 @@ function Form(props){
             //Pushes these into local storagegit
             toDoListItems.push(newToDo)
             window.localStorage.setItem('toDoListItems', JSON.stringify(toDoListItems));
+            
+            //Recreates the todolist state in todoList.js
             props.createToDoItems(JSON.parse(localStorage.getItem('toDoListItems')))
         }
 
