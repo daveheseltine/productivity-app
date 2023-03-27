@@ -1,0 +1,11 @@
+
+#formbackground {
+    margin-top: 35px;
+    background-image: url('../../assets/fitgroupdrawblue1.png');
+    background-size:cover;
+    color: white;
+}
+
+#exbackground {
+    background-color: white;
+}

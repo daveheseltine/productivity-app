@@ -56,7 +56,7 @@ function TodoItems(props){
     //JSX code for the todo list items and takes in the function deleteitems and the props.id as its argument
     return(
         <li className="toDoList row text-wrap" id={listId}>
-            <h4 className='toDoItemH4'>{props.name}</h4>
+            <h5 className='toDoItemH4'>{props.name}</h5>
             <div className='todoItemButtonContainer'>
                 <ShowMore
                 name={name}
