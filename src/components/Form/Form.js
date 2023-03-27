@@ -39,7 +39,7 @@ function Form(props){
             let toDoListItems = JSON.parse(window.localStorage.getItem('toDoListItems')) || [];
 
             let newToDo = {
-                //Gets an id for the object by assigning it a random number so it can be mapped later
+                //Gets an id for the object by assigning it a random number so it can be mapped later between 0 and 1000
                 id: Math.floor(Math.random() * 1000),
                 Name: toDoName,
                 Message: toDoMessage,

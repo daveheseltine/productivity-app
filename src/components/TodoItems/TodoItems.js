@@ -1,5 +1,6 @@
 import './TodoItems.css'
 import ShowMore from '../ShowMore/ShowMore';
+import anime from 'animejs/lib/anime.es.js';
 
 function TodoItems(props){
 
@@ -15,13 +16,27 @@ function TodoItems(props){
             props.createToDoItems(newItemArray);
         }
     }
+
+    function runStartAnimation(){
+        anime({
+            targets: [document.getElementById(props.id)],
+            rotate: '360'
+        })
+    }
+    function runEndAnimation(){
+        anime({
+            targets: [document.getElementById(props.id)],
+            rotate: '0'
+        })
+    }
+    //Needed to use as props for the modal
     const name = props.name;
     const message = props.message
     const date = props.date
     
     //JSX code for the todo list items and takes in the function deleteitems and the props.id as its argument
     return(
-        <li className="toDoList row text-wrap" id={props.id}>
+        <li className="toDoList row text-wrap">
             <h4 className='toDoItemH4'>{props.name}</h4>
             <div className='todoItemButtonContainer'>
                 <ShowMore 
@@ -29,7 +44,7 @@ function TodoItems(props){
                 message={message}
                 date={date}
                 />
-                <button className='toDoItemButton' onClick={() => deleteItem(props.id)}>Delete</button>
+                <button className='toDoItemButton' id={props.id} onClick={() => deleteItem(props.id)} onMouseEnter={() => runStartAnimation()} onMouseLeave={() => runEndAnimation()}>Delete</button>
             </div>
             
         </li>

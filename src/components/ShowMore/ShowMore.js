@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+//React bootstrap modal
 function ShowMore(props) {
   const [show, setShow] = useState(false);
 
