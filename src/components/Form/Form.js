@@ -1,12 +1,11 @@
 import React, {useState, useRef} from 'react';
 
 //Function to create a form component
-function Form(){
+function Form(props){
 
     //Uses state to update the name and messages for when the form is submitted
     const[toDoName, setToDoName] = useState('');
     const[toDoMessage, setToDoMessage] = useState('');
-    const [submitted, submitMessage] = useState('');
 
     //Gets the date, used https://www.makeuseof.com/react-date-picker/ for understanding of this
     const[date, setDate] = useState('');
@@ -33,7 +32,6 @@ function Form(){
     //Function for form submission, store the values in local storage before resetting them, this will then be used to render the todo list items in an unordered list
     function formSubmit(event){
         event.preventDefault();
-        submitMessage(`Thank you for sending me a message, for now this is a placeholder. You entered: Name:${toDoName}, message: ${toDoMessage}, Your date: ${date}`);
 
         //Form must at least have a name
         if (toDoName !== ''){
@@ -41,7 +39,7 @@ function Form(){
             let toDoListItems = JSON.parse(window.localStorage.getItem('toDoListItems')) || [];
 
             let newToDo = {
-                //Gets an id for the object by assigning it a random number so it can be mapped later
+                //Gets an id for the object by assigning it a random number so it can be mapped later between 0 and 1000
                 id: Math.floor(Math.random() * 1000),
                 Name: toDoName,
                 Message: toDoMessage,
@@ -50,6 +48,9 @@ function Form(){
             //Pushes these into local storage
             toDoListItems.push(newToDo)
             window.localStorage.setItem('toDoListItems', JSON.stringify(toDoListItems));
+
+            //Recreates the todolist state in todoList.js
+            props.createToDoItems(JSON.parse(localStorage.getItem('toDoListItems')))
         }
 
         //Resets state so a new input can be added
@@ -78,7 +79,6 @@ function Form(){
                 <div className='formButtonCustom'>
                     <button type="submit" className="btn btn-primary" onClick={formSubmit}>Submit</button>
                 </div>
-                <p className='submitMessage'>{submitted}</p>
             </form>   
         </div>
     );

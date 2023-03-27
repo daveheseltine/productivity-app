@@ -1,0 +1,25 @@
+.toDoList{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.toDoItemH4{
+    margin-bottom: 30px; 
+}
+
+.toDoItemButton{
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.todoItemButtonContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
