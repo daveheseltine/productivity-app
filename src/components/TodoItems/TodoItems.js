@@ -8,12 +8,16 @@ function TodoItems(props){
     function deleteItem(id){
         
         if (localStorage.getItem("toDoListItems") !== null){
-            //Takes each item and checks if the id != the id passed in
-            const newItemArray = props.toDoItems.filter(props => props.id !== id)
-            //Overwrites the old local storage with the new array
-            window.localStorage.setItem('toDoListItems', JSON.stringify(newItemArray));
-            //Updates the stateful component in the todo list
-            props.createToDoItems(newItemArray);
+            deleteAnimation();
+            setTimeout(function() {
+                //Takes each item and checks if the id != the id passed in
+                const newItemArray = props.toDoItems.filter(props => props.id !== id)
+                //Overwrites the old local storage with the new array
+                window.localStorage.setItem('toDoListItems', JSON.stringify(newItemArray));
+                //Updates the stateful component in the todo list
+                props.createToDoItems(newItemArray);
+            }, 750)
+
         }
     }
 
@@ -29,17 +33,32 @@ function TodoItems(props){
             rotate: '0'
         })
     }
+
+    function deleteAnimation(){
+        anime({
+            targets: document.getElementById(listId),
+            keyframes: [
+                {scale: 1.1},
+                {scale: 0}
+            ],
+            duration: 750
+        })
+    }
+
     //Needed to use as props for the modal
     const name = props.name;
-    const message = props.message
-    const date = props.date
+    const message = props.message;
+    const date = props.date;
+
+    const listId = Math.floor(Math.random() * 1000)
+    
     
     //JSX code for the todo list items and takes in the function deleteitems and the props.id as its argument
     return(
-        <li className="toDoList row text-wrap">
+        <li className="toDoList row text-wrap" id={listId}>
             <h4 className='toDoItemH4'>{props.name}</h4>
             <div className='todoItemButtonContainer'>
-                <ShowMore 
+                <ShowMore
                 name={name}
                 message={message}
                 date={date}

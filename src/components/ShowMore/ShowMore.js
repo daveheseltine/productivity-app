@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import anime from 'animejs/lib/anime.es.js';
 
 //React bootstrap modal
 function ShowMore(props) {
@@ -9,9 +10,24 @@ function ShowMore(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const modalId = Math.floor(Math.random() * 1000)
+
+  function runStartAnimation(){
+    anime({
+        targets: [document.getElementById(modalId)],
+        rotate: '360'
+    })
+    }
+    function runEndAnimation(){
+        anime({
+            targets: [document.getElementById(modalId)],
+            rotate: '0'
+        })
+    }
+
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} id={modalId} onMouseEnter={() => runStartAnimation()} onMouseLeave={() => runEndAnimation()}>
         Show More!
       </Button>
 
