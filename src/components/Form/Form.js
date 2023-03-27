@@ -1,11 +1,4 @@
 import React, {useState, useRef} from 'react';
-import './Form.css';
-
-import { Container } from 'react-bootstrap';
-import Row from '../../components/Row';
-import Col from '../../components/Col';
-
-
 
 //Function to create a form component
 function Form(){
@@ -40,10 +33,7 @@ function Form(){
     //Function for form submission, store the values in local storage before resetting them, this will then be used to render the todo list items in an unordered list
     function formSubmit(event){
         event.preventDefault();
-        submitMessage(`You have added a new schedule: \n
-                        You entered: Name:${toDoName}, \n
-                        message: ${toDoMessage}, \n
-                        date: ${date}`);
+        submitMessage(`Thank you for sending me a message, for now this is a placeholder. You entered: Name:${toDoName}, message: ${toDoMessage}, Your date: ${date}`);
 
         //Form must at least have a name
         if (toDoName !== ''){
@@ -53,9 +43,9 @@ function Form(){
             let newToDo = {
                 //Gets an id for the object by assigning it a random number so it can be mapped later
                 id: Math.floor(Math.random() * 1000),
-                title: toDoName,
-                description: toDoMessage,
-                date: date
+                Name: toDoName,
+                Message: toDoMessage,
+                Date: date
             }
             //Pushes these into local storage
             toDoListItems.push(newToDo)
@@ -69,43 +59,28 @@ function Form(){
     }
     
     return(
-        <Container id='formbackground'>
-          <Row>
-            <Col className="col-sm-6" size='sm-6' id='form'>
-                <h3>Schedule:</h3>
-                <form className="contactForm" >
+        <div>
+            <form className="contactForm">
+                <h3 className='toDoh3'>Enter your todo title:</h3>
                 <div className="form-group">
-                <p></p>
-                    <label>Title:</label>
-                    <input type="text" className="form-control" name="toDoName" value={toDoName} placeholder="Enter name/title" onChange={HandleInputChange}/>
+                    <label>Your todo name:</label>
+                    <input type="text" className="form-control" name="toDoName" value={toDoName} placeholder="Enter name" onChange={HandleInputChange}/>
                 </div>
 
                 <div className="form-group">
-                <p></p>
-                    <label>Description:</label>
+                    <label>Enter your todo description:</label>
                     <textarea type="text-area" className="form-control" name="toDoMessage" value={toDoMessage} placeholder="Enter Message..." rows="3" onChange={HandleInputChange}/>
                 </div>
                 <div>
-                <p></p>
-                    <p >Date: {date}</p>
-                    <input type="date" name="toDoDate" onChange={HandleInputChange} ref={dateInputRef} style={{color: 'black'}} />
-                    <div className='formButtonCustom'>
+                    <input type="date" name="toDoDate" onChange={HandleInputChange} ref={dateInputRef}/>
+                    <p>Selected Date: {date}</p>
+                </div>
+                <div className='formButtonCustom'>
                     <button type="submit" className="btn btn-primary" onClick={formSubmit}>Submit</button>
-                    <p className='submitMessage'>{submitted}</p>
                 </div>
-                </div>
-                </form>
-                </Col>
-                <Col className="col-sm-6" size='sm-6' id='todoList'> 
-                <h3>To Do List:</h3>
-                       <ul>
-                        </ul>
-                    
-                </Col>
-              
-</Row>
-</Container>
-
+                <p className='submitMessage'>{submitted}</p>
+            </form>   
+        </div>
     );
 }
 
