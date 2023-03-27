@@ -20,7 +20,7 @@ function Todolist(){
                     <TodoItems 
                         key={listItems.id}
                         name={listItems.Name}
-                        message={listItems.message}
+                        message={listItems.Message}
                         date={listItems.Date}
                         id={listItems.id}
                         createToDoItems = {createToDoItems}

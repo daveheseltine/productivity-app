@@ -14,10 +14,12 @@
     background-color: red;
     padding: 10px;
     border-radius: 10px;
+    margin-left: 10px;
 }
 
 .todoItemButtonContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
