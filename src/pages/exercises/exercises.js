@@ -4,6 +4,8 @@ import API from "../../utils/API.js";
 import Masonry from "react-masonry-css";
 import "./exercises.css";
 
+import { Container } from 'react-bootstrap';
+import Row from '../../components/Row';
 
 function Exercises() {
     // API loading indicator:
@@ -104,7 +106,20 @@ function Exercises() {
     const radioDifficulty = radioGenerate(optionsDifficulty, "difficulty");
 
     return (
-        <div class="d-flex flex-wrap" style={{backgroundColor: "#e6e6e6"}}>
+        <div>
+            <div>
+            <Container id='formbackground'  style={{fontFamily: 'Georgia'}}>
+                <Row>
+                <div>
+                    <h2>Exercises</h2>
+                    <p>Find an inspiration for your workout</p>
+                    <p></p>
+                </div>
+                </Row>
+            </Container>
+          </div>  
+
+        <div class="d-flex flex-wrap" style={{backgroundColor: "#aec4e8"}}>
             {/* Radios: */}
             <div class="col-lg-3 col-md-4 col-12 px-3" style={{positon: "fixed !important", height: "100vh"}}>
                 {radioType}
@@ -118,6 +133,7 @@ function Exercises() {
                     {masonryContent}
                 </Masonry>
             </div>
+        </div>
         </div>
     )
 }
