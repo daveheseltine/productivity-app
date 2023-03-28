@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Footer from '../../components/Footer';
 import Wrapper from '../../components/Wrapper';
 import Row from '../../components/Row';
-import Col from '../../components/Col';
+// import Col from '../../components/Col';
 import './home.css';
 
 
@@ -20,7 +20,7 @@ function Home(){
         <Row>
           </Row>
       </Container>
-      <Container>
+      {/* <Container>
         <Row>
           <Col className="col-sm-6" size='sm-6' id='home'>
             <h4 className="card-title">Special title treatment</h4>
@@ -45,7 +45,7 @@ function Home(){
             <button className="btn btn-primary">Go somewhere</button>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
 
 
       
