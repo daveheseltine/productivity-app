@@ -1,4 +1,8 @@
 import React, {useState, useRef} from 'react';
+import { Container } from 'react-bootstrap';
+import Row from '../../components/Row';
+import Col from '../../components/Col';
+
 
 //Function to create a form component
 function Form(props){
@@ -41,9 +45,9 @@ function Form(props){
             let newToDo = {
                 //Gets an id for the object by assigning it a random number so it can be mapped later between 0 and 1000
                 id: Math.floor(Math.random() * 1000),
-                Name: toDoName,
-                Message: toDoMessage,
-                Date: date
+                title: toDoName,
+                description: toDoMessage,
+                date: date
             }
             //Pushes these into local storage
             toDoListItems.push(newToDo)
@@ -60,27 +64,35 @@ function Form(props){
     }
     
     return(
-        <div>
-            <form className="contactForm">
-                <h3 className='toDoh3'>Enter your todo title:</h3>
+        <Container >
+          <Row>
+            <Col className="col-sm-12" size='sm-12' id='form'>
+                <form className="contactForm" >
                 <div className="form-group">
-                    <label>Your todo name:</label>
-                    <input type="text" className="form-control" name="toDoName" value={toDoName} placeholder="Enter name" onChange={HandleInputChange}/>
+                <p></p>
+                    <label>Title:</label>
+                    <input type="text" className="form-control" name="toDoName" value={toDoName} placeholder="Enter name/title" onChange={HandleInputChange}/>
                 </div>
 
                 <div className="form-group">
-                    <label>Enter your todo description:</label>
+                <p></p>
+                    <label>Description:</label>
                     <textarea type="text-area" className="form-control" name="toDoMessage" value={toDoMessage} placeholder="Enter Message..." rows="3" onChange={HandleInputChange}/>
                 </div>
                 <div>
-                    <input type="date" name="toDoDate" onChange={HandleInputChange} ref={dateInputRef}/>
-                    <p>Selected Date: {date}</p>
-                </div>
-                <div className='formButtonCustom'>
+                <p></p>
+                    <p >Date: {date}</p>
+                    <input type="date" name="toDoDate" onChange={HandleInputChange} ref={dateInputRef} style={{color: 'black'}} />
+                    <div className='formButtonCustom'>
                     <button type="submit" className="btn btn-primary" onClick={formSubmit}>Submit</button>
+
                 </div>
-            </form>   
-        </div>
+                </div>
+                </form>
+                </Col>
+
+</Row>
+</Container>
     );
 }
 

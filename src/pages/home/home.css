@@ -1,20 +1,28 @@
-.header {
-    background-color: #5b8fc4;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 80px;
-}
+
 
 body{
-    background-color: #91c5f5;
+    background-color: #aec4e8 !important;
   
 }
 
 .jumbotron {
-    background-image: url('../../assets/fitguys.png');
-    background-size:auto;
+    background-image: url('../../assets/fitgroupdrawblue1.png');
+    background-size: cover;
     background-repeat: no-repeat;
-    height: calc(50vh - 25px);
-    background-color: #b8cde1;
+    height: calc(50vh - 15px);
+    /* background-color: #b8cde1; */
     align-content: center;
-    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    color: rgb(255, 255, 255);
+}
+
+#title {
+    font-size: 120px ;
+    color: lightseagreen !important;
+}
+
+#home {
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    
 }

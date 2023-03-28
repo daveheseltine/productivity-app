@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind pages;
 
-/* * {
-  background-color: steelblue;
-  font-family: Georgia;
-  font-size: large;
-  color: white;
-
-} */
-
-
 body {
   margin: 0;
   background-color: rgb(72, 109, 139);
