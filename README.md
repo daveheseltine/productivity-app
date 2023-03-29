@@ -6,19 +6,19 @@ As a team, we conceived and executed a design for a client-side single-page appl
 
 The design we selected for the project was a website designed to help you take control of your health and wellbeing productivity, by providing workout inspiration and tracking/scheduling of your progress. Our motivation for this was to aid users in time management. It also gave us a greater understanding of react and using different libraries in JS.
 
-```md
+```
 AS A fitness enthusiast
 I WANT to access workout ideas
 SO THAT I gain may new exercises to increase my productivity
 ```
 
-```md
+```
 AS A fitness enthusiast
 I WANT to add items to a to-do list
 SO THAT I may take record on my current productivity
 ```
 
-```md
+```
 AS A fitness enthusiast
 I WANT to track to-do list items and thier due dates on a calender
 SO THAT I may plan my future productivity
