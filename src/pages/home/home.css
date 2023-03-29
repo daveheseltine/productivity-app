@@ -18,11 +18,29 @@ body{
 }
 
 #title {
-    font-size: 120px ;
+    font-size: 12vw;
     color: lightseagreen !important;
+}
+
+#subtitle {
+    font-size: 3vw;
+    color: white !important;
 }
 
 #home {
     font-family: Georgia, 'Times New Roman', Times, serif !important;
     
 }
+
+.footer {
+    font-size: 1.5vw;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
+

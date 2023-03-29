@@ -24,13 +24,13 @@ function TodoItems(props){
     function runStartAnimation(){
         anime({
             targets: [document.getElementById(props.id)],
-            rotate: '360'
+            scale: '1.2'
         })
     }
     function runEndAnimation(){
         anime({
             targets: [document.getElementById(props.id)],
-            rotate: '0'
+            scale: '1'
         })
     }
 
