@@ -137,14 +137,15 @@ community include:<a href="#references">*[3]*</a>
     professional setting.
 
 ## Questions/Contacts
-Heseltine, David
-GitHub: daveheseltine
+Please contact us via GitHub:
 
-Ryder, George
-GitHub: NotGeorgeHere
+</br>
 
-Singcak, Florante
-GitHub: FlorSing
+Heseltine, David: daveheseltine
+Ryder, George: NotGeorgeHere
+Singcak, Florante: FlorSing
+
+</br>
 
 ## License
 MIT License
@@ -200,3 +201,4 @@ ___
 1. Trilogy Skills Bootcamp (2023) *UK-VIRT-FE-PT-12-2022-U-LOLC/13-project-2-part-1-module/readme.md*
 2. Trilogy Skills Bootcamp (2023) *UK-VIRT-FE-PT-12-2022-U-LOLC/13-project-2-part-1-module/01-project-day-1-lesson/README.md*
 3. Contributor Covenant: https://www.contributor-covenant.org/
+4. Deployed application: https://mellow-clafoutis-de2706.netlify.app/
