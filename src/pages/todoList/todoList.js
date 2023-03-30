@@ -46,30 +46,6 @@ function Todolist(){
     </Container>
 
 
-        // <Col id='formbackground'>
-        //     <Form />
-        // </Col>
-
-        // <Col id='formbackground'>
-              
-        //         <h3>To Do List:</h3>
-        //         {/* Passes this into form as a prop so it can update the state whenever a form is submitted */}
-        //         <ul className="toDolistContainer">
-        //             {toDoItems.map((listItems) => (
-        //                 <TodoItems 
-        //                     key={listItems.id}
-        //                     name={listItems.title}
-        //                     message={listItems.description}
-        //                     date={listItems.date}
-        //                     id={listItems.id}
-        //                     createToDoItems = {createToDoItems}
-        //                     toDoItems = {toDoItems}
-        //                 />
-        //             )
-        //             )}
-        //         </ul>
-                
-        // </Col>
 
     );
 }

@@ -119,6 +119,13 @@ function Exercises() {
     const radioDifficulty = radioGenerate(optionsDifficulty, "difficulty");
 
     return (
+        
+    <div>
+        <div id="formbackground">
+            <h2 >Exercises</h2>
+            <p >Find an inspiration for your next workout</p>
+        </div>
+
         <div className="d-flex flex-wrap">
             {/* Radios: */}
             <div className="col-lg-3 col-md-4 col-12 px-3">
@@ -138,6 +145,7 @@ function Exercises() {
                 </Masonry>
             </div>
         </div>
+    </div>
     )
 }
 
